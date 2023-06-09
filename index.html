@@ -41,11 +41,12 @@
                     <a href="#rendezveny" draggable="false">Rendezvények</a>
                 </li>
                 <li>
-                    <a href="#galeria" draggable="false">Galéria</a>
-                </li>
-                <li>
                     <a href="#elerhetoseg" draggable="false">Elérhetőségünk</a>
                 </li>
+                <li>
+                    <a href="#galeria" draggable="false">Galéria</a>
+                </li>
+                
             </ul>
         </div>
         <div class="navDiv">
@@ -76,14 +77,12 @@
         <div class="container" id="rolunk">
             <div class="halfContainer textContent">
                 <div>
-                    <h2>Rólunk</h2>
+                    <h2 class="cikkcim">Rólunk</h2>
                     <p>Szeretettel várunk mindenkit megújult környezetben, megszokott szolgáltatásainkkal, italainkkal és óriáspalacsintáinkkal, a főváros 17. kerületében.
                     <br><br>
                     Kávézónk továbbá teret enged egyedi rendezvény megrendezésének is. 
                     </p>
-                    <div class="center">
-                        <a class="gomb" href="">Mégtöbb rólunk</a>
-                    </div>
+                    
                     
                 </div>
             </div>
@@ -91,11 +90,35 @@
                 <img src="assets/img/belter.jpg" alt="Rólunk">
             </div>
         </div>
+        <!-- Szolgáltatások -->
+        <div class="container" id="szolgaltatasok">
+                <h2 class="cikkcim">Szolgáltatásaink</h2>
+
+                <div id="iconsor">
+                    <div class="iconok">
+                        <img src="assets/img/icons/billiard.png" alt="Billiárd" title="Billiárd">
+                        <h3>Billiárd</h3>
+                    </div>
+                    <div class="iconok">
+                        <img src="assets/img/icons/foosball.png" alt="Csocsó" title="Csocsó">
+                        <h3>Csocsó</h3>
+                    </div>
+                    <div class="iconok">
+                        <img src="assets/img/icons/darts.png" alt="Darts" title="Darts">
+                        <h3>Darts</h3>
+                    </div>
+                    <div class="iconok">
+                        <img src="assets/img/icons/party.png" alt="Rendezvényszervezés" title="Rendezvényszervezés">
+                        <h3>Rendezvények szervezése</h3>
+                    </div>
+                    
+                </div>
+        </div>
         <!-- SZENDVICSEINK -->
-        <div class="container container--alternative" id="szendvicseink">
-            <div class="halfContainer halfContainer--alternative textContent textContent--alternative">
+        <div class="container--alternative" id="szendvicseink">
+            <div class="halfContainer--alternative textContent--alternative">
                 <div>
-                    <h2>Szendvicseink</h2>
+                    <h2 class="cikkcim">Szendvicseink</h2>
                     <p>
                     16 féle feltétünkkel kínáljuk szendvicseinket, hogy mindenki megtalálja a kedvencét. A sonkástól a 
                     lazacosig minden ízlést kielégítünk.
@@ -115,7 +138,7 @@
                     
                 </div>
             </div>
-            <div class="halfContainer imgContent">
+            <div class="halfContainer--alternative imgContent--alternative">
                 <img src="assets/img/szendvicsek2.jpeg" alt="Szendvicseink">
             </div>
         </div>
