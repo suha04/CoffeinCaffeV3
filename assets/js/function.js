@@ -39,7 +39,13 @@ document.addEventListener('DOMContentLoaded', function () {
   const images = carousel.querySelectorAll('img');
   const text = document.querySelectorAll('.textContent .text');
   const arrows = document.querySelectorAll('.arrow');
+  const slideCounter = document.getElementById('slideCounter');
+  const totalSlides = document.querySelectorAll('.imgContent img').length;
+
+
   let currentIndex = 0;
+
+  showSlide(currentIndex); // Első Slide
 
   function showSlide(index) {
     images.forEach(function (image, i) {
@@ -69,6 +75,31 @@ document.addEventListener('DOMContentLoaded', function () {
     showSlide(currentIndex);
   }
 
+  // Counter
+  let currentSlide = 1;
+  slideCounter.textContent = `${currentSlide}/${totalSlides}`;
+
+  function updateSlideCounter() {
+  slideCounter.textContent = `${currentSlide}/${totalSlides}`;
+  }
+
+  const leftArrow = document.querySelector('.arrow.left');
+  const rightArrow = document.querySelector('.arrow.right');
+
+  leftArrow.addEventListener('click', () => {
+  currentSlide = (currentSlide - 1) < 1 ? totalSlides : currentSlide - 1;
+  updateSlideCounter();
+  });
+
+  rightArrow.addEventListener('click', () => {
+  currentSlide = (currentSlide + 1) > totalSlides ? 1 : currentSlide + 1;
+  updateSlideCounter();
+  });
+
+
+
+// Carousel nyilak
+
   arrows.forEach(function (arrow) {
     arrow.addEventListener('click', function () {
       if (this.classList.contains('left')) {
@@ -78,9 +109,10 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-
-  showSlide(currentIndex); // Added to initialize the first slide state
 });
+
+
+
 
 
 //Aktív nav elemek

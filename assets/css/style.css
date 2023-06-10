@@ -176,7 +176,6 @@ animation: arrow 2s infinite;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: var(--fontcolor);
     padding-block: 2rem;
     position: relative;
 }
@@ -190,7 +189,6 @@ animation: arrow 2s infinite;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: var(--secondarycolor);
     flex-direction: row-reverse;
     padding-block: 2rem;
 }
@@ -372,7 +370,34 @@ h1
     transform: scale(1.2);
 }
 
+#rolunk
+{
+    padding-top: 0;
+}
 
+.slideCounter {
+    
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    font-size: 3rem;
+    color: var(--fontcolor);
+    font-family: 'BebasNeue';
+    margin: auto;
+    position: relative;
+  }
+
+  .slideCounter::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0 0 4rem 4rem;
+    background-color: var(--coffered); 
+    z-index: -1;
+
+  }
 
 #szolgaltatasok
 {
@@ -440,6 +465,7 @@ h1
     user-select: none;
     font-size: 3rem;
     color: var(--coffelightred);
+
   }
 
   .arrow::before
@@ -447,9 +473,9 @@ h1
     position: absolute;
     content: "";
     display: block;
-    width: 100%; /* adjust the size as needed */
-    height: 100%; /* adjust the size as needed */
-    background-color: white; /* replace with your desired background color */
+    width: 100%; 
+    height: 100%; 
+    background-color: white; 
     z-index: -1;
     scale: 1.5;
   }
@@ -457,6 +483,12 @@ h1
   .arrow i:active
   {
     scale: 1.2;
+    outline: none;
+  }
+  
+  .arrow i:focus
+  {
+    outline: none;
   }
   
   .arrow.left {
@@ -475,12 +507,19 @@ h1
     right: 3rem;
   }
 
+  
+
   .textContent .text:not(.active) {
     display: none;
   }
 
   .imgContent img:not(.active) {
     display: none;
+  }
+
+  #szendvicseink
+  {
+    background-color: var(--secondarycolor);
   }
 
   #palacsintaink
