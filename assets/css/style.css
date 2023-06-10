@@ -271,12 +271,13 @@ animation: arrow 2s infinite;
     justify-content: center;
     align-items: center;
     position: relative;
+    
 }
 
 .imgContent img
 {
     display: block;
-    width: clamp(400px, 50vw, 900px);
+    width: clamp(350px, 50vw, 900px);
     max-height: 100%;
     margin: auto;
     padding: 1rem;
@@ -287,10 +288,11 @@ animation: arrow 2s infinite;
 .imgContent--alternative img
 {
     display: block;
-    width: clamp(400px, 50vw, 900px);
+    width: clamp(350px, 50vw, 900px);
     max-height: 100%;
     margin: auto;
     padding: 1rem;
+    object-fit: cover;
 }
 
 .center
@@ -425,6 +427,8 @@ h1
     color: var(--fontcolor);
     margin-top: 10px;   
 }
+
+
   
   .arrow {
     position: absolute;
@@ -436,11 +440,30 @@ h1
     user-select: none;
     font-size: 3rem;
     color: var(--coffelightred);
-    
+  }
+
+  .arrow::before
+  {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%; /* adjust the size as needed */
+    height: 100%; /* adjust the size as needed */
+    background-color: white; /* replace with your desired background color */
+    z-index: -1;
+    scale: 1.5;
   }
   
   .arrow.left {
     left: 3rem;
+  }
+
+  .arrow.left::before{
+    border-radius: 0 2rem 2rem 0;
+  }
+
+  .arrow.right::before{
+    border-radius: 2rem 0 0 2rem;
   }
   
   .arrow.right {
