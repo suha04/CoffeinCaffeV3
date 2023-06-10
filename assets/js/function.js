@@ -15,9 +15,9 @@ hamburger.addEventListener('click', () => {
 
 //Navbar eltűnik görgetésre
 
-const currentScrollPos = window.pageYOffset;
+const currentScrollPos = window.scrollY;
 window.onscroll = function() {
-    let prevScrollpos = window.pageYOffset;
+    let prevScrollpos = window.scrollY;
 
   if (prevScrollpos == currentScrollPos) {
 // Látszódó navbar

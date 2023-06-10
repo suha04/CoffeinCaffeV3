@@ -177,6 +177,7 @@ animation: arrow 2s infinite;
     background-size: cover;
     background-position: center;
     padding-block: 2rem;
+    
     position: relative;
 }
 
@@ -197,7 +198,6 @@ animation: arrow 2s infinite;
 .halfContainer
 {
     flex-basis: 50%;
-    
 }
 
 .textContent
@@ -370,11 +370,6 @@ h1
     transform: scale(1.2);
 }
 
-#rolunk
-{
-    padding-top: 0;
-}
-
 .slideCounter {
     
     display: flex;
@@ -393,7 +388,7 @@ h1
     display: block;
     width: 5rem;
     height: 5rem;
-    border-radius: 0 0 4rem 4rem;
+    border-radius: 0 0 2rem 2rem;
     background-color: var(--coffered); 
     z-index: -1;
 
@@ -457,8 +452,7 @@ h1
   
   .arrow {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+   
     color: var(--secondarycolor);
     cursor: pointer;
     z-index: 1;
@@ -558,6 +552,7 @@ h1
     width: 100%;
     object-fit: contain;
    }
+
 
 
 
